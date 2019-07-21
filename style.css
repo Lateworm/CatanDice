@@ -1,0 +1,82 @@
+[v-cloak] {display: none}
+
+body {
+  background-color: #2D2D2D;
+  color: #DDDDDD;
+
+  font-family: sans-serif;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0rem 1rem; /* prevent content from touching the edge of the screen */
+  margin: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: #579AD1;
+  color: #FFFFFF;
+  border: 0px;
+  border-radius: 2px;
+
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 8rem;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 6rem;
+  margin: 0;
+  text-align: center;
+}
+
+.title {
+  color: #8ACE94;
+}
+
+.dice {
+  width: 4.5rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 5rem;
+}
+
+.die {
+  background-color: #8ACE94;
+  color: #252526;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.seven {
+  color: #FF6E76;
+}
