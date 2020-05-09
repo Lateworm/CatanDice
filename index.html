@@ -12,21 +12,26 @@
 </head>
 
 <body>
-  <section id='vue'>
-    <h2 v-if='roll[0] === 0' class='title'>Catan Dice</h2>
-
-    <h1
-      v-if='roll[0] !== 0'
-      v-bind:class='{ seven: roll[0] + roll[1] === 7 }'
-      v-cloak
-    >{{ roll[0] + roll[1] }}</h1>
-    <div class='dice'>
-      <div v-if='roll[0] !== 0' class='die'><span>{{ roll[0] }}</span></div>
-      <div v-if='roll[1] !== 0' class='die'><span>{{ roll[1] }}</span></div>
+  <main id='vue'>
+    <div class='title-container' v-if='roll[0] === 0'>
+      <h2>Catan Dice</h2>
     </div>
 
-    <button v-on:click='draw'>Roll the bones!</button>
-  </section>
+    <div class='dice-container' v-else>
+      <h1 v-bind:class='{ seven: roll[0] + roll[1] === 7 }' v-cloak>{{ roll[0] + roll[1] }}</h1>
+
+      <div class='dice'>
+        <div class='die'><span>{{ roll[0] }}</span></div>
+        <div class='die'><span>{{ roll[1] }}</span></div>
+      </div>
+    </div>
+
+    <div class='button-container'>
+      <button v-on:click='draw'>
+        <span>Roll the bones!</span>
+      </button>
+    </div>
+  </main>
 </body>
 
 <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/vue'></script>
